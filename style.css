@@ -1,0 +1,353 @@
+/* ---------- Tokens ---------- */
+:root{
+  --paper: #f3e8d5;
+  --paper-edge: #e3d0ac;
+  --paper-locked: #e3c9c2;
+  --paper-unlocked: #f6e2d8;
+  --ink: #3b2a2e;
+  --ink-soft: #6b5560;
+  --rose: #c97b84;
+  --blue: #7fa8c9;
+  --gold: #b98f42;
+  --bg-1: #4a3b33;
+  --bg-2: #2d2320;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+  font-family: 'Lora', serif;
+  color: var(--ink);
+  background-color: var(--bg-1);
+  overflow-x:hidden;
+}
+
+#app{
+  position:relative;
+  width:100%;
+  min-height:100vh;
+}
+
+/* ---------- Escenas ---------- */
+.scene{
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  min-height:100vh;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.scene.active{
+  position:relative;
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.scene-cover{ transform: translateY(0); }
+.scene-cover:not(.active){ transform: translateY(-20px); }
+
+.scene-grid{ transform: translateY(20px); }
+.scene-grid.active{ transform: translateY(0); }
+
+/* ---------- Portada ---------- */
+.scene-cover{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 32px 20px;
+}
+
+.cover-card{
+  max-width: 420px;
+  text-align:center;
+  color: #f3e8d5;
+}
+
+.cover-date{
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: rgba(243,232,213,0.6);
+  margin-bottom: 18px;
+}
+
+.cover-title{
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 1.05;
+  margin: 0 0 22px;
+  color: #f8ecd8;
+}
+
+.cover-msg{
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(243,232,213,0.85);
+  margin: 0 0 34px;
+}
+
+.btn-empezar{
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 10px 38px;
+  border-radius: 40px;
+  border: 1px solid rgba(243,232,213,0.5);
+  background: transparent;
+  color: #f8ecd8;
+  cursor:pointer;
+  transition: background .3s ease, transform .2s ease;
+}
+
+.btn-empezar:hover{
+  background: rgba(243,232,213,0.12);
+  transform: translateY(-2px);
+}
+
+/* ---------- Cuadrícula ---------- */
+.scene-grid{
+  padding: 28px 14px 60px;
+}
+
+.grid-header{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  text-align:center;
+  padding: 10px 0 18px;
+  background: linear-gradient(to bottom, var(--bg-1) 70%, transparent);
+}
+
+.grid-header h2{
+  font-family:'Caveat', cursive;
+  font-size: 2.2rem;
+  color:#f8ecd8;
+  margin: 0 0 4px;
+}
+
+.grid-progress{
+  font-size: 0.85rem;
+  color: rgba(243,232,213,0.7);
+  margin:0;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* ---------- Papelito ---------- */
+.paper{
+  position:relative;
+  aspect-ratio: 1 / 1.15;
+  background: var(--paper);
+  border-radius: 3px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.28), 0 1px 2px rgba(0,0,0,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.paper:hover{
+  box-shadow: 0 6px 14px rgba(0,0,0,0.32);
+}
+
+.paper:active{
+  transform: scale(0.96) rotate(var(--rot)) !important;
+}
+
+/* esquina doblada */
+.paper::before{
+  content:"";
+  position:absolute;
+  top:0; right:0;
+  width:0; height:0;
+  border-style: solid;
+  border-width: 0 16px 16px 0;
+  border-color: transparent var(--paper-edge) transparent transparent;
+  filter: drop-shadow(-1px 1px 1px rgba(0,0,0,0.15));
+}
+
+.paper .num{
+  font-family:'Caveat', cursive;
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.paper .mark{
+  position:absolute;
+  bottom:6px;
+  right:8px;
+  font-size: 0.95rem;
+  opacity:0;
+  transform: scale(0.6);
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.paper.read .mark{
+  opacity:1;
+  transform: scale(1);
+}
+
+.paper.read .num{
+  color: var(--rose);
+  opacity: 0.55;
+}
+
+/* la razón 30 */
+.paper.special{
+  grid-column: 1 / -1;
+  aspect-ratio: auto;
+  height: 92px;
+  background: var(--paper-locked);
+  flex-direction:row;
+  gap: 10px;
+}
+
+.paper.special.unlocked{
+  background: var(--paper-unlocked);
+}
+
+.paper.special .num{
+  font-size: 1.6rem;
+}
+
+.paper.special.locked{
+  cursor: default;
+  opacity: 0.85;
+}
+
+.paper.special.locked:hover{
+  box-shadow: 0 3px 8px rgba(0,0,0,0.28);
+}
+
+/* ---------- Overlay / tarjeta ---------- */
+.overlay{
+  position:fixed;
+  inset:0;
+  background: rgba(20,14,12,0);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+  z-index: 50;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition: opacity .35s ease, background .35s ease;
+}
+
+.overlay.active{
+  background: rgba(20,14,12,0.72);
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.card{
+  position:relative;
+  width: 100%;
+  max-width: 380px;
+  max-height: 82vh;
+  overflow-y:auto;
+  background: var(--paper);
+  border-radius: 6px;
+  padding: 34px 26px 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  transform: scale(0.9) translateY(10px);
+  transition: transform .35s ease;
+}
+
+.overlay.active .card{
+  transform: scale(1) translateY(0);
+}
+
+.card-close{
+  position:absolute;
+  top: 10px;
+  right: 12px;
+  background:none;
+  border:none;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  cursor:pointer;
+  line-height:1;
+  padding: 6px;
+}
+
+.card-inner .card-num{
+  font-family:'Caveat', cursive;
+  font-size: 2.6rem;
+  color: var(--rose);
+  margin: 0 0 6px;
+}
+
+.card-inner .card-text{
+  font-size: 1.08rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-inner .card-letter-title{
+  font-family:'Caveat', cursive;
+  font-size: 1.7rem;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+.card-inner .card-letter-body p{
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin: 0 0 14px;
+}
+
+.secret-toggle{
+  display:inline-block;
+  margin-top: 18px;
+  font-family:'Caveat', cursive;
+  font-size: 1.15rem;
+  color: var(--blue);
+  background: none;
+  border: 1px dashed var(--blue);
+  border-radius: 20px;
+  padding: 6px 16px;
+  cursor:pointer;
+}
+
+.secret-content{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition: max-height .4s ease, opacity .4s ease, margin-top .4s ease;
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.secret-content.open{
+  max-height: 400px;
+  opacity:1;
+  margin-top: 14px;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 640px){
+  .grid{ max-width: 560px; }
+  .cover-title{ font-size: 3.8rem; }
+}

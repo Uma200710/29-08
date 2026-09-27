@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>29/08/2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="./heavy-black-heart_2764.png">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ESCENA 1: PORTADA -->
+  <section class="scene scene-cover active" id="scene-cover">
+    <div class="cover-card">
+      <h1 class="cover-title">Para el amor<br>de mi vida</h1>
+      <p class="cover-msg">Hay un montón de cosas que siento por vos que quizás no siempre sé decirte. Así que esta vez hice algo para intentar mostrártelas.</p>
+      <button class="btn-empezar" id="btn-empezar">Empezar</button>
+    </div>
+  </section>
+
+  <!-- ESCENA 2: CUADRÍCULA DE RAZONES -->
+  <section class="scene scene-grid" id="scene-grid">
+    <header class="grid-header">
+      <h2>30 razones</h2>
+      <p class="grid-progress" id="grid-progress">0/29 descubiertas</p>
+    </header>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- OVERLAY / TARJETA GRANDE -->
+  <div class="overlay" id="overlay">
+    <div class="card" id="card">
+      <button class="card-close" id="card-close" aria-label="Cerrar">✕</button>
+      <div class="card-inner" id="card-inner"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
