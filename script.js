@@ -99,7 +99,7 @@ function renderGrid() {
     div.dataset.id = r.id;
     div.innerHTML = `
       <span class="num">${r.id}</span>
-      <span class="mark">💙</span>
+      <span class="mark">❤️</span>
     `;
     div.addEventListener("click", () => openReason(r.id));
     gridEl.appendChild(div);
