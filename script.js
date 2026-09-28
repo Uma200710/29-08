@@ -24,7 +24,7 @@ const reasons = [
   { id: 18, text: "Porque todavía me emociono un poquito antes de verte" },
   { id: 19, text: "Porque siempre me alegro cuando veo tu mensaje de buenos días" },
   { id: 20, text: "Porque me encanta escucharte hablar de lo que te interesa" },
-  { id: 21, text: "Porque adoro tu personalidad" },
+  { id: 21, text: "Porque no importa cuanto tiempo pasemos juntos, siempre te voy a extrañar cuando llegue a casa" },
   { id: 22, text: "Porque me parece tierno como siempre buscas agarrarme la mano" },
   { id: 23, text: "Porque me encanta compartir planes simples con vos" },
   { id: 24, text: "Porque mi razón favorita para amarte es porque sos vos" },
