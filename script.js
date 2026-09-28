@@ -43,7 +43,7 @@ const finalLetter = {
   paragraphs: [
     "No soy muy buena diciendo este tipo de cosas, pero con vos, quería hacer el intento.",
     "Aunque me cuesta muchísimo, quería que sepas todo lo lindo que me pasa con vos, y aunque hubiera escrito mil razones, nunca podría hacerte entender todo el amor que te tengo.",
-    "Me di cuenta que te amaba porque por primera vez queria compartir mi vida con alguien, y ese alguien sos vos 💙.",
+    "Me di cuenta que te amaba porque por primera vez queria compartir mi vida con alguien, y ese alguien sos vos. 💙",
   ]
 };
 
