@@ -15,7 +15,7 @@ const reasons = [
   { id: 10, text: "Porque darte un beso es la sensación más linda del mundo" },
   { id: 11, text: "Porque adoro la forma en la que hablas" },
   { id: 12, text: "Porque me pareces precioso desde el primer momento en que te vi",
-      secret: "Probablemente no lo sepas, o capaz que sí, pero realmente me pareces hermoso desde la primera vez que te vi, es por eso que aparecí de la nada entre tus seguidores de Instagram JAJSJA. Desgraciadamente (o por suerte), soy muy imbécil y nunca me animé a hablarte, pero para mí eso es lo de menos porque hoy estoy con un chico divino 💙" },
+      secret: "Probablemente no lo sepas, o capaz que sí, pero realmente me pareces muy atractivo desde la primera vez que te vi, es por eso que aparecí de la nada entre tus seguidores de Instagram jej. Desgraciadamente (o por suerte), soy muy imbécil y nunca me animé a hablarte, pero para mí eso es lo de menos porque hoy estoy con un chico divino 💙" },
   { id: 13, text: "Porque sin saberlo, sos todo lo que necesitaba en mi vida y todo lo que deseo" },
   { id: 14, text: "Porque me enamora incluso la forma en la que me mirás" },
   { id: 15, text: "Porque sos ese lugar seguro que se siente como un \"hogar\" para mí" },
@@ -24,11 +24,11 @@ const reasons = [
   { id: 18, text: "Porque todavía me emociono un poquito antes de verte" },
   { id: 19, text: "Porque siempre me alegro cuando veo tu mensaje de buenos días" },
   { id: 20, text: "Porque me encanta escucharte hablar de lo que te interesa" },
-  { id: 21, text: "Porque tenés algo en tu actitud que todavía no sé cómo describir pero que me encanta" },
+  { id: 21, text: "Porque adoro tu personalidad" },
   { id: 22, text: "Porque me parece tierno como siempre buscas agarrarme la mano" },
   { id: 23, text: "Porque me encanta compartir planes simples con vos" },
   { id: 24, text: "Porque mi razón favorita para amarte es porque sos vos" },
-  { id: 25, text: "Porque simplemente sabes quererme" },
+  { id: 25, text: "Porque no tengo que explicarte como quererme" },
   { id: 26, text: "Porque adoro que me acaricies el pelo aunque odio que otras personas lo hagan" },
   { id: 27, text: "Porque no quiero que me hagas falta nunca" },
   { id: 28, text: "Porque una parte de mí ya no sabe vivir sin vos" },
@@ -42,7 +42,8 @@ const finalLetter = {
   title: "Feliz primer mes, mi vida",
   paragraphs: [
     "No soy muy buena diciendo este tipo de cosas, pero con vos, quería hacer el intento.",
-    "Aunque me cuesta muchísimo, quería que sepas todo lo lindo que me pasa con vos, y aunque hubiera escrito mil razones, nunca podría hacerte entender todo el amor que te tengo 💙"
+    "Aunque me cuesta muchísimo, quería que sepas todo lo lindo que me pasa con vos, y aunque hubiera escrito mil razones, nunca podría hacerte entender todo el amor que te tengo 💙."
+    "Me di cuenta que te amaba porque por primera vez queria compartir mi vida con alguien, y ese alguien sos vos"
   ]
 };
 
