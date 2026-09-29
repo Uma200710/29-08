@@ -10,12 +10,12 @@ const reasons = [
   { id: 5,  text: "Porque veo todos los días como te esforzas por las cosas que te interesan" },
   { id: 6,  text: "Porque puedo hablar de cualquier tema con vos" },
   { id: 7,  text: "Porque desde que llegaste no hubo un día en el que me haya sentido sola" },
-  { id: 8,  text: "El culo te abrocho (era necesario) 💗" },
+  { id: 8,  text: "El culo te abrocho (era necesario jekejekj) " },
   { id: 9,  text: "Porque me mostraste lo que es un amor lindo de verdad" },
   { id: 10, text: "Porque darte un beso es la sensación más linda del mundo" },
   { id: 11, text: "Porque adoro la forma en la que hablas" },
   { id: 12, text: "Porque me pareces precioso desde el primer momento en que te vi",
-      secret: "Probablemente no lo sepas, o capaz que sí, pero realmente me pareces muy atractivo desde la primera vez que te vi, es por eso que aparecí de la nada entre tus seguidores de Instagram jej. Desgraciadamente (o por suerte), soy muy imbécil y nunca me animé a hablarte, pero para mí eso es lo de menos porque hoy estoy con un chico divino 💙" },
+      secret: "Probablemente no lo sepas, o capaz que sí, pero realmente me pareces muy atractivo desde la primera vez que te vi, es por eso que aparecí de la nada entre tus seguidores de Instagram, je. Desgraciadamente (o por suerte), soy muy imbécil y nunca me animé a hablarte, pero para mí eso es lo de menos porque hoy estoy con un chico divino 💙" },
   { id: 13, text: "Porque sin saberlo, sos todo lo que necesitaba en mi vida y todo lo que deseo" },
   { id: 14, text: "Porque me enamora incluso la forma en la que me mirás" },
   { id: 15, text: "Porque sos ese lugar seguro que se siente como un \"hogar\" para mí" },
@@ -32,7 +32,7 @@ const reasons = [
   { id: 26, text: "Porque adoro que me acaricies el pelo aunque odio que otras personas lo hagan" },
   { id: 27, text: "Porque no quiero que me hagas falta nunca" },
   { id: 28, text: "Porque una parte de mí ya no sabe vivir sin vos" },
-  { id: 29, text: "Porque todavía nos queda muchísimo por vivir juntos 💗" },
+  { id: 29, text: "Porque todavía nos queda muchísimo por vivir juntos" },
 ];
 
 const finalLetter = {
