@@ -10,7 +10,7 @@ const reasons = [
   { id: 5,  text: "Porque veo todos los días como te esforzas por las cosas que te interesan" },
   { id: 6,  text: "Porque puedo hablar de cualquier tema con vos" },
   { id: 7,  text: "Porque desde que llegaste no hubo un día en el que me haya sentido sola" },
-  { id: 8,  text: "El culo te abrocho (era necesario jekejekj) " },
+  { id: 8,  text: "El culo te abrocho (era necesario jeje) " },
   { id: 9,  text: "Porque me mostraste lo que es un amor lindo de verdad" },
   { id: 10, text: "Porque darte un beso es la sensación más linda del mundo" },
   { id: 11, text: "Porque adoro la forma en la que hablas" },
